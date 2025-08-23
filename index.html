@@ -20,7 +20,6 @@
         });
     })();
     </script>
-    <script src="script.js"></script>
 </head>
 <body>
 <script src="script.js"></script>
@@ -32,13 +31,13 @@
     </div>
    
     <div class="right">
-        <a href="http://github.com" target="_blank" rel="no-referrer">
+        <a href="https://github.com/saurabh850" target="_blank" rel="no-referrer">
             <i class="fa-brands fa-github"></i>
             <span>Github</span>
         </a>
 
 
-        <a href="http://linkedin.com" target="_blank" rel="no-referrer">
+        <a href="https://www.linkedin.com/in/saurabh-thakur-978b27324/" target="_blank" rel="no-referrer">
             <i class="fa-brands fa-linkedin"></i>
             <span>Linkedin</span>
         </a>
@@ -115,7 +114,7 @@
 
  
 <!-- SECTION 3 Projects -->
-<div class="projects-section">
+<div class="projects-section" id="projects">
   <h2>Projects</h2>
   <p class="text">Some of the work I’ve done so far.</p>
 
@@ -124,7 +123,7 @@
       <img src="porfolio.png" alt="Portfolio">
       <span>Portfolio</span>
       <p>Created a Portfolio using HTML,CSS and JS</p>
-      <a href="https://github.com/yourusername/todo-app" target="_blank">View on GitHub</a>
+      <a href="https://github.com/saurabh850/portfolio" target="_blank">View on GitHub</a>
     </div>
 
     <div class="cell2">
@@ -145,19 +144,20 @@
 
 <div class="group">
     <div class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Numquam a ullam voluptas sed facilis architecto assumenda, 
-        quam nesciunt ipsam nihil nam facere possimus recusandae.
+        If you would like to discuss a project, explore potential opportunities, or have any questions, please reach out using the form beside. I’ll get back to you as soon as possible.
     </div>
 
-<form id="contact-form">
-  <input type="text" name="user_name" placeholder="Your Name" required>
-  <input type="email" name="user_email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 
+    <p id="messagesent" class="message"></p>
 </div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
 
  </section>
 

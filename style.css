@@ -393,3 +393,30 @@ nav .right a span {
 .contact-section .group form button:hover{
     filter: brightness(.9);
 }
+
+/* Contact form message */
+#messagesent {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    display: none; /* hidden until JS updates it */
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Success message */
+#messagesent.success {
+    display: block;
+    color: #2ecc71;           /* green text */
+    background: #eafaf1;      /* soft green background */
+    border: 1px solid #2ecc71;
+}
+
+/* Error message */
+#messagesent.error {
+    display: block;
+    color: #e74c3c;           /* red text */
+    background: #fdecea;      /* soft red background */
+    border: 1px solid #e74c3c;
+}
