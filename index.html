@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "vhZEsKjwEpChCsy2t",
+        });
+    })();
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+</body>
+<!-- NAV BAR -->
+ <nav>
+    <div class="left">
+    <a href="/">Shaurabh Thakur</a>
+    </div>
+   
+    <div class="right">
+        <a href="http://github.com" target="_blank" rel="no-referrer">
+            <i class="fa-brands fa-github"></i>
+            <span>Github</span>
+        </a>
+
+
+        <a href="http://linkedin.com" target="_blank" rel="no-referrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>Linkedin</span>
+        </a>
+        
+        <a href="mailto:shaurabhnarayan@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+        </a>
+
+    </div>
+ </nav>
+ <main>
+
+
+<!-- SECTION 1 Hero -->
+ <section class="hero-section">
+    <div class="text">
+        <h2>Hi, I'm Shaurabh👋 </h2>
+        <p>Really intrigued about the world of Web applications and Mobile applications, with expertise in C++, HTML, CSS and JavaScript. I enjoy creating amazing functionalities out of nothing, through code.
+        </p>
+        <div class="links">
+            <a href="#skills">
+                <i class="fa-solid fa-code"></i>
+                <span>Skills</span>
+            </a>
+
+            <a href="#projects">
+                <i class="fa-solid fa-pen"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="#contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    <div class="headshot">
+        <img src="snoop.avif" alt="Shaurabhheadshot">
+    </div>
+
+ </section>
+
+ 
+<!-- SECTION 2 Skilled -->
+ <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="text">
+        I have a solid foundation in C++ and JavaScript, with growing experience in React and React Native for building user-friendly web and mobile applications. I am familiar with Node.js, Express, and databases like MongoDB and MySQL, which helps me understand the basics of full-stack development. I also work with tools such as Git/GitHub, VS Code, and Postman to manage projects effectively. Along with technical skills, I am continuously improving my problem-solving abilities, particularly in Data Structures and Algorithms, and I bring strengths in communication, teamwork, and adaptability to every project I take on.
+    </div>
+    <div class="cells">
+        <div class="cell">
+            <img src="html.png" alt="HTML Logo">
+            <span>HTML</span>
+        </div>
+
+        <div class="cell">
+            <img src="css-3.png" alt="CSS Logo">
+            <span>CSS</span>
+        </div>
+
+        <div class="cell">
+            <img src="js.png" alt="JavaScript Logo">
+            <span>JavaScript</span>
+        </div>
+
+          <div class="cell">
+            <img src="c-.png" alt="C++ Logo">
+            <span>C++</span>
+        </div>
+    </div>
+ </section>
+
+
+ 
+<!-- SECTION 3 Projects -->
+<div class="projects-section">
+  <h2>Projects</h2>
+  <p class="text">Some of the work I’ve done so far.</p>
+
+  <div class="cells">
+    <div class="cell2">
+      <img src="porfolio.png" alt="Portfolio">
+      <span>Portfolio</span>
+      <p>Created a Portfolio using HTML,CSS and JS</p>
+      <a href="https://github.com/yourusername/todo-app" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="cell2">
+      <img src="weather-screenshot.png" alt="Weather App Screenshot">
+      <span>Weather App</span>
+      <p>Weather forecast app using OpenWeather API and JavaScript.</p>
+      <a href="https://github.com/yourusername/weather-app" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+<!-- SECTION 4 Contact -->
+ <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+
+<div class="group">
+    <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Numquam a ullam voluptas sed facilis architecto assumenda, 
+        quam nesciunt ipsam nihil nam facere possimus recusandae.
+    </div>
+
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" cols="30" rows="10"></textarea>
+
+        <button type="submit" onclick="sendMail()">Send Message</button>
+    </form>
+</div>
+
+ </section>
+
+ </main>
+
+
+</html>
