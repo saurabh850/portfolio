@@ -1,16 +1,20 @@
-function sendMail() {
-    let parms = {
-        name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        message : document.getElementById("message").value
-    };
+const serviceID = "service_1gydj9p";
+const templateID = "template_8f3iwyw";
+const publicKey = "vhZEsKjwEpChCsy2t";
 
-    emailjs.send("service_1gydj9p", "template_8f3iwyw", parms, "vhZEsKjwEpChCsy2t")
+emailjs.init(publicKey);
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Send the form using EmailJS
+  emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-        alert("Email Sent!");
+      alert("Message sent successfully!");
+      this.reset(); // clear the form after success
     })
-    .catch((err) => {
-        console.log("FAILED...", err);
-        alert("Failed to send email. Try again later.");
+    .catch((error) => {
+      console.error("Failed to send:", error);
+      alert("Failed to send message. Please try again.");
     });
-}
+});
