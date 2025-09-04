@@ -421,3 +421,90 @@ nav .right a span {
     background: #fdecea;      /* soft red background */
     border: 1px solid #e74c3c;
 }
+
+/* CERTIFICATIONS SECTION */
+.certifications-section {
+  background: var(--background-color); /* matches site background */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.certifications-section h2 {
+  font-size: 35px;
+  margin-bottom: 24px;
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cert-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cert-card {
+  background: #f8f9fb; /* matches project card background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 24px 20px;
+  width: 260px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #d3d3d3;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+.cert-card i {
+  font-size: 2.2rem;
+  color: var(--link-color);
+  margin-bottom: 12px;
+}
+
+.cert-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.cert-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.cert-card a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted var(--link-color);
+  transition: color 0.2s;
+}
+
+.cert-card a:hover {
+  color: #365ad6;
+}
+
+.cert-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.cert-card a:hover img {
+  box-shadow: 0 6px 18px rgba(60,60,120,0.18);
+}
