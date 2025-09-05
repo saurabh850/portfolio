@@ -105,9 +105,17 @@ nav .right a span {
     justify-content: right;
 }
 
-.hero-section .headshot img{
-    width: 350px;
+.hero-section .headshot img {
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
+    object-fit: contain;      /* Show the whole image */
+    object-position: center;  /* Center the image */
+    box-shadow: 0 4px 16px rgba(60,60,120,0.08);
+    border: 3px solid #fff;
+    background: #e0e7ef;
+    display: block;
+    margin: 0 auto;
 }
 
 
