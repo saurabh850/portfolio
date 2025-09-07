@@ -100,9 +100,9 @@ nav .right a span {
 }
 
 .hero-section .headshot{
-    flex: 2;
     display: flex;
-    justify-content: right;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-section .headshot img {
@@ -115,7 +115,23 @@ nav .right a span {
     border: 3px solid #fff;
     background: #e0e7ef;
     display: block;
-    margin: 0 auto;
+}
+
+.hero-section .headshot .cv-btn {
+    margin-top: 18px;
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--link-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+    box-shadow: 0 2px 8px rgba(60,60,120,0.06);
+    text-decoration: none;
+    text-align: center;
 }
 
 
@@ -529,15 +545,67 @@ nav .right a span {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
     box-shadow: 0 2px 8px rgba(60,60,120,0.06);
     text-decoration: none;
+    text-align: center;
 }
-.cv-btn i {
-    margin-right: 8px;
-}
+
 .cv-btn:hover {
     background: #365ad6;
     color: #fff;
     box-shadow: 0 4px 16px rgba(60,60,120,0.12);
+    transform: translateY(-3px) scale(1.04);
+}
+
+.cv-bracket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    font-size: 1.1rem;
+}
+
+.cv-bracket .bracket {
+    font-size: 2.2rem;
+    color: var(--link-color);
+    font-weight: bold;
+    margin: 0 10px;
+    user-select: none;
+    letter-spacing: 2px;
+}
+
+.cv-bracket .cv-btn {
+    background: transparent;
+    color: var(--link-color);
+    border: 2px solid var(--link-color);
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv-bracket .cv-btn:hover {
+    background: var(--link-color);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(60,60,120,0.12);
+}
+
+.skills-list {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 0 0 18px 0;
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
