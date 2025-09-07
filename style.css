@@ -516,3 +516,28 @@ nav .right a span {
 .cert-card a:hover img {
   box-shadow: 0 6px 18px rgba(60,60,120,0.18);
 }
+
+/* CV Button */
+.cv-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 24px;
+    background: var(--link-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(60,60,120,0.06);
+    text-decoration: none;
+}
+.cv-btn i {
+    margin-right: 8px;
+}
+.cv-btn:hover {
+    background: #365ad6;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(60,60,120,0.12);
+}
