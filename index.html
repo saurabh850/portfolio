@@ -38,7 +38,9 @@
             <i class="fa-solid fa-envelope"></i>
             <span>Email</span>
         </a>
-
+        <button id="theme-toggle" onclick="toggleTheme()" title="Toggle B&W mode">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
     </div>
  </nav>
  <main>
@@ -48,7 +50,7 @@
  <section class="hero-section">
     <div class="text">
         <h2>Hi, I'm Shaurabh👋 </h2>
-        <p>Really intrigued about the world of Web applications and Mobile applications, with expertise in C++, HTML, CSS and JavaScript. I enjoy creating amazing functionalities out of nothing, through code.
+        <p>Really intrigued about the world of Web applications and Mobile applications, with expertise in Python, C++, HTML, CSS and JavaScript. I enjoy creating amazing functionalities out of nothing, through code.
         </p>
         <div class="links">
             <a href="#skills">
@@ -71,7 +73,7 @@
     </div>
     <div class="headshot">
         <img src="headshot2.jpg" alt="Shaurabh headshot">
-        <a href="Shaurabh_Thakur_CV.pdf" class="cv-btn" download>
+        <a href="MAINCV.pdf" class="cv-btn" download>
             <i class="fa-solid fa-download"></i>
             Download my CV
         </a>
@@ -85,7 +87,7 @@
     <h2>Skills</h2>
     <div class="text">
         <p>
-            I have a solid foundation in <b>C++</b> and <b>JavaScript</b>, with growing experience in <b>React</b> and <b>React Native</b> for building user-friendly web and mobile applications. I am familiar with <b>Node.js</b>, <b>Express</b>, and databases like <b>MongoDB</b> and <b>MySQL</b>, which helps me understand the basics of full-stack development. I also work with tools such as <b>Git/GitHub</b>, <b>VS Code</b>, and <b>Postman</b> to manage projects effectively. Along with technical skills, I am continuously improving my problem-solving abilities, particularly in <b>Data Structures and Algorithms</b>, and I bring strengths in <b>communication</b>, <b>teamwork</b>, and <b>adaptability</b> to every project I take on.
+            I have a solid foundation in <b>C++</b>, <b>Python</b>, and <b>JavaScript</b>, with experience in <b>React</b>, <b>Flask</b>, and <b>Node.js</b> for building full-stack web applications. I work with databases like <b>MongoDB</b>, <b>MySQL</b>, and <b>PostgreSQL</b>, and have applied <b>REST APIs</b>, <b>JWT authentication</b>, <b>ORM</b>, and <b>CRUD</b> patterns in real projects. I use tools such as <b>Git/GitHub</b>, <b>VS Code</b>, <b>Postman</b>, and <b>Vite</b> to ship projects effectively, and I bring strengths in <b>communication</b>, <b>teamwork</b>, and <b>adaptability</b> to every project.
         </p>
     </div>
     <div class="cells">
@@ -108,6 +110,31 @@
             <img src="c-.png" alt="C++ Logo">
             <span>C++</span>
         </div>
+
+        <div class="cell">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
+            <span>Python</span>
+        </div>
+
+        <div class="cell">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask Logo">
+            <span>Flask</span>
+        </div>
+
+        <div class="cell">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo">
+            <span>React</span>
+        </div>
+
+        <div class="cell">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo">
+            <span>Node.js</span>
+        </div>
+
+        <div class="cell">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Logo">
+            <span>MongoDB</span>
+        </div>
     </div>
  </section>
 
@@ -119,18 +146,37 @@
   <p class="text">Some of the work I’ve done so far.</p>
 
   <div class="cells">
+
+    <!-- NEW: SwipeFood -->
     <div class="cell2">
-      <img src="porfolio.png" alt="Portfolio">
-      <span>Portfolio</span>
-      <p>Created a Portfolio using<br> HTML, CSS and JS.</p>
-      <a href="https://github.com/saurabh850/portfolio" target="_blank">View on GitHub</a>
+      <img src="swipefood.png" alt="SwipeFood - Mobile-First Food Discovery App">
+      <span>SwipeFood</span>
+      <p class="proj-duration">Jan 2026 – Feb 2026</p>
+      <p>A TikTok-style mobile-first food discovery platform with full-screen swipe cards, dual authentication (Users & Food Partners), JWT cookies, video/image uploads via Multer &amp; ImageKit, and a glassmorphic React UI.</p>
+      <p class="proj-stack">JavaScript · React · Node.js · Express · MongoDB · JWT · Vite · Multer · ImageKit</p>
+      <a href="https://github.com/saurabh850/SwipeFood" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
     </div>
 
+    <!-- NEW: SocialConnect -->
+    <div class="cell2">
+      <img src="socialconnect.png" alt="SocialConnect - Social Networking Web App">
+      <span>SocialConnect</span>
+      <p class="proj-duration">Dec 2025 – Feb 2026</p>
+      <p>A Flask-based social networking web app with registration, login/logout, session handling (Werkzeug), full CRUD for posts, SQLAlchemy ORM with SQLite/PostgreSQL, and Jinja2 templating.</p>
+      <p class="proj-stack">Python · Flask · SQLAlchemy · SQLite · PostgreSQL · Jinja2 · Bootstrap</p>
+      <div class="proj-links">
+        <a href="https://github.com/saurabh850/SocialConnect" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://github.com/saurabh850/SocialConnect" target="_blank" class="live-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+      </div>
+    </div>
+
+    <!-- Existing Projects -->
     <div class="cell2">
       <img src="proj3.png" alt="C++ Social Platform (Terminal)">
       <span>C++ Social Platform (Terminal)</span>
       <p>A C++ console-based social platform with user authentication, password hashing, message posting, and file-based data storage.</p>
-      <a href="https://github.com/saurabh850/CPP-Social-Platform-Terminal-" target="_blank">View on GitHub</a>
+      <p class="proj-stack">C++ · OOP · File I/O · Password Hashing · Data Structures</p>
+      <a href="https://github.com/saurabh850/CPP-Social-Platform-Terminal-" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
     </div>
   </div>
 </div>
@@ -142,6 +188,14 @@
 <section id="certifications" class="certifications-section">
   <h2>Certifications</h2>
   <div class="cert-cards">
+    <div class="cert-card">
+      <i class="fa-solid fa-certificate" style="color:#f97316;"></i>
+      <h3>Research Methodology</h3>
+      <p>by NPTEL &mdash; Sep 2025</p>
+      <a href="MAINCV.pdf" target="_blank">
+        <img src="RSMTH.png" alt="Research Methodology NPTEL">
+      </a>
+    </div>
     <div class="cert-card">
       <i class="fa-solid fa-certificate"></i>
       <h3>Machine Learning</h3>

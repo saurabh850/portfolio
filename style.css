@@ -2,6 +2,22 @@
     --text-color: #1a1c20;
     --link-color: #4a76ee;
     --background-color: #eeeff1;
+    --card-bg: #f8f9fb;
+    --card-border: #d3d3d3;
+    --muted-text: #555;
+}
+
+body.dark-mode {
+    --text-color: #e8eaf0;
+    --link-color: #6b9bff;
+    --background-color: #111318;
+    --card-bg: #1e2028;
+    --card-border: #2e3040;
+    --muted-text: #9aa0b4;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
 }
 
 * {
@@ -19,6 +35,7 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color);
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -59,6 +76,28 @@ nav .right a:last-child {
 nav .right a span {
     margin-left: 5px;
 }
+
+/* Theme toggle button */
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--text-color);
+    margin-left: 10px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-flex;
+    align-items: center;
+}
+
+#theme-toggle:hover {
+    background: var(--text-color);
+    color: var(--background-color);
+}
+
+
 
 
 /* SECTION 1: hero */
@@ -169,8 +208,11 @@ nav .right a span {
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 5px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .skills-section .cells .cell img{
@@ -282,7 +324,7 @@ nav .right a span {
 
 .projects-section .text {
     font-size: 16px;
-    color: #555;
+    color: var(--muted-text);
     margin-bottom: 30px;
     max-width: 600px;
 }
@@ -304,11 +346,10 @@ nav .right a span {
 
     width: 320px;
     padding: 20px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid var(--card-border);
     border-radius: 12px;
 
-    /* Softer background */
-    background: #f8f9fb; /* light grayish card */
+    background: var(--card-bg);
     
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 
@@ -319,7 +360,8 @@ nav .right a span {
 .projects-section .cell2:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 15px rgba(0,0,0,0.12);
-    background: #ffffff; /* brighten a bit on hover */
+    background: var(--card-bg);
+    filter: brightness(1.06);
 }
 
 
@@ -342,7 +384,7 @@ nav .right a span {
 /* Project Description */
 .projects-section .cell2 p {
     font-size: 14px;
-    color: #666;
+    color: var(--muted-text);
     text-align: center;
     margin: 0;
 }
@@ -363,6 +405,53 @@ nav .right a span {
 
 .projects-section .cell2 a:hover {
     background: #365ad6; /* darker shade */
+}
+
+/* Project duration label */
+.projects-section .cell2 .proj-duration {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--link-color);
+    margin: -8px 0 0 0;
+    letter-spacing: 0.5px;
+}
+
+/* Tech stack pill */
+.projects-section .cell2 .proj-stack {
+    font-size: 11.5px;
+    color: var(--muted-text);
+    font-style: italic;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Multi-link container */
+.projects-section .cell2 .proj-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.projects-section .cell2 .proj-links a {
+    margin-top: 0;
+}
+
+/* Live link – slightly different colour */
+.projects-section .cell2 .live-link {
+    background: #16a34a;
+}
+.projects-section .cell2 .live-link:hover {
+    background: #15803d;
+}
+
+/* Flask icon — invert only in light mode */
+.skills-section .cell img[alt="Flask Logo"] {
+    filter: invert(1) brightness(0.3);
+}
+body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
+    filter: invert(0) brightness(1.8);
 }
 
 /* SECTION 4: Contact */
@@ -396,11 +485,13 @@ nav .right a span {
 .contact-section .group form textarea{
     font-family: 'Poppins', sans-serif;
     border: 2px solid var(--link-color);
-    background-color: transparent;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     padding: 10px;
     margin-bottom: 15px;
     outline: none;
     resize: none;
+    transition: background 0.3s, color 0.3s;
 }
 
 .contact-section .group form button{
@@ -469,7 +560,7 @@ nav .right a span {
 }
 
 .cert-card {
-  background: #f8f9fb; /* matches project card background */
+  background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   padding: 24px 20px;
@@ -478,13 +569,14 @@ nav .right a span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1.5px solid #d3d3d3;
+  border: 1.5px solid var(--card-border);
 }
 
 .cert-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 15px rgba(0,0,0,0.12);
-  background: #fff;
+  background: var(--card-bg);
+  filter: brightness(1.06);
 }
 
 .cert-card i {
@@ -502,7 +594,7 @@ nav .right a span {
 
 .cert-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--muted-text);
   margin-bottom: 14px;
 }
 

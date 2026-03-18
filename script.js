@@ -31,4 +31,15 @@ window.addEventListener("DOMContentLoaded", () => {
         messageEl.style.display = "block";
       });
   });
+
+  // Restore theme preference
+  if (localStorage.getItem("dark-mode") === "on") {
+    document.body.classList.add("dark-mode");
+  }
 });
+
+// Dark mode toggle
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode") ? "on" : "off");
+}
