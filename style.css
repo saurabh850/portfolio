@@ -193,6 +193,21 @@ nav .right a span {
 
 }
 
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.skill-category h3 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
 .skills-section .cells{
     display: flex;
     justify-content: center;
