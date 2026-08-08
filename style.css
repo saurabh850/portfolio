@@ -178,7 +178,7 @@ nav .right a span {
 
 .skills-section{
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 .skills-section h2{
@@ -335,7 +335,7 @@ nav .right a span {
 
 /* Project Section */
 .projects-section {
-    padding: 50px 20px;
+    padding: 20px 20px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
