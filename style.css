@@ -148,7 +148,7 @@ nav .right a span {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    object-fit: contain;      /* Show the whole image */
+    object-fit: cover;        /* Cover the entire circle */
     object-position: center;  /* Center the image */
     box-shadow: 0 4px 16px rgba(60,60,120,0.08);
     border: 3px solid #fff;
