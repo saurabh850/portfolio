@@ -66,7 +66,7 @@ nav .right a {
     margin: 0 10px;
 }
 
-nav .right a:last-child {
+nav .right a:last-of-type {
     color: var(--background-color);
     background-color: var(--text-color);
     padding: 5px 15px;
@@ -282,53 +282,91 @@ nav .right a span {
 @media(max-width: 600px){
     /* NAV BAR */
     nav {
-        padding: 0px 20px;
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
     }
 
-    NAV .right a{
+    nav .right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav .right a {
         font-size: 22px;
+        margin: 0;
     }
 
-        NAV .right a:last-child{
+    nav .right a:last-of-type {
         color: var(--text-color);
         background-color: transparent;
-        padding: 0
+        padding: 0;
     }
 
-
-    NAV .right a span{
+    nav .right a span {
         display: none;
     }
 
-    /* SECTION 1: Hero */
-    .hero-section{
-        padding: 0 20px;
+    #theme-toggle {
+        margin-left: 0;
     }
 
-    .hero-section .text h2{
-       font-size: 30px;
+    /* SECTION 1: Hero */
+    .hero-section {
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .hero-section .text h2 {
+       font-size: 28px;
     }
 
     /* SECTION 2: Skills */
-    .skills-section{
+    .skills-section {
         padding: 0 20px;
     }
 
-    .skills-section .cells .cell span{
-        font-size: 16px;
+    .skills-categories {
+        gap: 30px 10px;
+        justify-content: space-between;
     }
 
-    .projects-section{
-        padding: 0 20px;
+    .skill-category {
+        min-width: 45%;
     }
 
-    .projetcs-section .cells2 .cel2l2 span{
-        font-size: 16px;
+    .skill-category h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .skills-section .cells .cell {
+        gap: 8px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 14px;
+    }
+
+    /* SECTION 3: Projects */
+    .projects-section {
+        padding: 20px 15px;
+    }
+
+    .projects-section .cell2 {
+        width: 100%;
     }
 
     /* SECTION 4: Contact */
-    .contact-section{
+    .contact-section {
         padding: 0 20px;
+    }
+    
+    .contact-section .group {
+        gap: 30px;
     }
 }
 
