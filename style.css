@@ -704,8 +704,9 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
 }
 
 .cert-card img {
-  width: 100%;
+  width: auto;
   max-width: 220px;
+  max-height: 160px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 8px;
