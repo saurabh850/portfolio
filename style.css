@@ -648,6 +648,8 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .cert-card {
