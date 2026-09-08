@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
 </head>
 <body>
 <script src="script.js"></script>
@@ -313,7 +311,10 @@
 <!-- SECTION 5 Github Contributions -->
 <section id="github" class="github-section">
     <h2>GitHub Contributions</h2>
-    <p class="github-stats">235 contributions in the last year</p>
+    <div class="github-stats">
+        <i class="fa-brands fa-github"></i>
+        <span><strong>235</strong> contributions in the last year</span>
+    </div>
     <div class="github-chart">
         <a href="https://github.com/saurabh850" target="_blank">
             <img src="https://ghchart.rshah.org/4a76ee/saurabh850" alt="Saurabh's Github Chart" />
@@ -366,14 +367,12 @@
         If you would like to discuss a project, explore potential opportunities, or have any questions, please reach out using the form. I’ll get back to you as soon as possible.
     </div>
 
-  <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required>
-    <input type="email" name="user_email" placeholder="Your Email" required>
+  <form id="contact-form" action="mailto:shaurabhnarayan@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send</button>
   </form>
-
-    <p id="messagesent" class="message"></p>
 </div>
 
   

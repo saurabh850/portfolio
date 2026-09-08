@@ -638,10 +638,31 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
 }
 
 .github-stats {
-    font-size: 16px;
-    color: var(--muted-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #2ea043;
+    background: rgba(46, 160, 67, 0.1);
+    padding: 8px 18px;
+    border-radius: 20px;
     margin-bottom: 30px;
     font-weight: 500;
+    border: 1px solid rgba(46, 160, 67, 0.2);
+    transition: background 0.2s;
+}
+
+.github-stats:hover {
+    background: rgba(46, 160, 67, 0.15);
+}
+
+.github-stats i {
+    font-size: 18px;
+}
+
+.github-stats strong {
+    font-weight: 700;
 }
 
 .github-chart {
