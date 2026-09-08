@@ -1,40 +1,27 @@
-// Initialize EmailJS with your Public Key
-emailjs.init("vhZEsKjwEpChCsy2t");  
+// Restore theme preference immediately to prevent flashing
+if (localStorage.getItem("dark-mode") === "on") {
+  document.body.classList.add("dark-mode");
+}
 
-// Wait for DOM to load
+// Wait for DOM to load for forms
 window.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  const messageEl = document.getElementById("messagesent");
+  // Handle Contact Form cleanly
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent standard insecure URL-encoded submission
 
-  if (!form || !messageEl) {
-    console.error("Form or message element not found in DOM.");
-    return;
-  }
+      const name = document.getElementById("contact-name").value;
+      const email = document.getElementById("contact-email").value;
+      const message = document.getElementById("contact-message").value;
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+      // Construct a clean, perfectly formatted email
+      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-    const serviceID = "service_1gydj9p";
-    const templateID = "template_8f3iwyw";
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        messageEl.textContent = "Message sent successfully!";
-        messageEl.className = "success";
-        messageEl.style.display = "block";
-        this.reset();
-      })
-      .catch((error) => {
-        console.error("Failed to send:", error);
-        messageEl.textContent = "Failed to send message. Please try again.";
-        messageEl.className = "error";
-        messageEl.style.display = "block";
-      });
-  });
-
-  // Restore theme preference
-  if (localStorage.getItem("dark-mode") === "on") {
-    document.body.classList.add("dark-mode");
+      // Open the user's default email client
+      window.location.href = `mailto:shaurabhnarayan@gmail.com?subject=${subject}&body=${body}`;
+    });
   }
 });
 
