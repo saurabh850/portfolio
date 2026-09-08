@@ -210,6 +210,50 @@ nav .right a span {
 
 }
 
+.skills-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 30px auto 50px auto;
+    max-width: 1000px;
+}
+
+.highlight {
+    background: var(--card-bg);
+    border: 1.5px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.12);
+    background: var(--card-bg);
+    filter: brightness(1.06);
+}
+
+.highlight i {
+    font-size: 26px;
+    color: var(--link-color);
+    margin-bottom: 14px;
+}
+
+.highlight h4 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.highlight p {
+    font-size: 14px;
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
 .skills-categories {
     display: flex;
     flex-wrap: wrap;
@@ -377,7 +421,12 @@ nav .right a span {
         width: 100%;
     }
 
-    /* SECTION 4: Contact */
+    /* SECTION 5: Github */
+    .github-section {
+        padding: 0 20px;
+    }
+
+    /* SECTION 6: Contact */
     .contact-section {
         padding: 0 20px;
     }
@@ -545,7 +594,108 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
     filter: invert(0) brightness(1.8);
 }
 
-/* SECTION 4: Contact */
+/* SECTION 5: Github Contributions */
+.github-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.github-section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.github-stats {
+    font-size: 16px;
+    color: var(--muted-text);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.github-chart {
+    background: var(--card-bg);
+    border: 1.5px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.github-chart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.12);
+}
+
+.github-chart img {
+    width: 100%;
+    min-width: 600px;
+    display: block;
+}
+
+body.dark-mode .github-chart img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.pr-heading {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+.pr-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pr-card {
+    background: var(--card-bg);
+    border: 1.5px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pr-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.12);
+    border-color: #8250df;
+}
+
+.pr-card.open-pr:hover {
+    border-color: #2da44e;
+}
+
+.pr-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--muted-text);
+}
+
+.pr-card h4 {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* SECTION 6: Contact */
 
 .contact-section{
     padding: 0 50px;
@@ -644,11 +794,10 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
 }
 
 .cert-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -656,67 +805,59 @@ body.dark-mode .skills-section .cell img[alt="Flask Logo"] {
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  padding: 24px 20px;
-  width: 260px;
+  overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
   border: 1.5px solid var(--card-border);
 }
 
 .cert-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 10px 15px rgba(0,0,0,0.12);
   background: var(--card-bg);
-  filter: brightness(1.06);
-}
-
-.cert-card i {
-  font-size: 2.2rem;
-  color: var(--link-color);
-  margin-bottom: 12px;
-}
-
-.cert-card h3 {
-  font-size: 1.15rem;
-  color: var(--text-color);
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.cert-card p {
-  font-size: 0.95rem;
-  color: var(--muted-text);
-  margin-bottom: 14px;
+  filter: brightness(1.04);
 }
 
 .cert-card a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px dotted var(--link-color);
-  transition: color 0.2s;
-}
-
-.cert-card a:hover {
-  color: #365ad6;
+  display: block;
+  width: 100%;
 }
 
 .cert-card img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
   object-position: center;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  box-shadow: 0 2px 8px rgba(60,60,120,0.08);
-  transition: box-shadow 0.2s;
-  cursor: pointer;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid var(--card-border);
+  transition: filter 0.2s;
 }
 
 .cert-card a:hover img {
-  box-shadow: 0 6px 18px rgba(60,60,120,0.18);
+  filter: brightness(0.9);
+}
+
+.cert-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.cert-info h3 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.cert-info p {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  margin: 0;
 }
 
 /* CV Button */
