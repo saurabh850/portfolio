@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="script.js"></script>
-</body>
 <!-- NAV BAR -->
  <nav>
     <div class="left">
@@ -207,26 +205,18 @@
 
     <!-- NEW: FacadeOC -->
     <div class="cell2">
-      <img src="facadeoc.png" alt="FacadeOC - Web Application">
+      <img src="facadeoc.png" alt="FacadeOC - AI Software & Engine">
       <span>FacadeOC</span>
       <p class="proj-duration">2026</p>
-      <p>A modern web application featuring complex dispatch console logic, integrated audio generation, and a fully responsive mobile layout with optimized scrolling behaviors.</p>
-      <p class="proj-stack">HTML · CSS · JavaScript · Responsive Design</p>
+      <p>An advanced software engine and web platform featuring a powerful Retrieval-Augmented Generation (RAG) pipeline, fully automated CI/CD workflows for auto-updates, and integrated AI audio generation.</p>
+      <p class="proj-stack">JavaScript · Python · RAG Pipeline · CI/CD Automation</p>
       <div class="proj-links">
         <a href="https://github.com/saurabh850/FacadeOC-Releases" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="https://imaginworld.site" target="_blank" class="live-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
       </div>
     </div>
 
-    <!-- NEW: SwipeFood -->
-    <div class="cell2">
-      <img src="swipefood.png" alt="SwipeFood - Mobile-First Food Discovery App">
-      <span>SwipeFood</span>
-      <p class="proj-duration">Jan 2026 – Feb 2026</p>
-      <p>A TikTok-style mobile-first food discovery platform with full-screen swipe cards, dual authentication (Users & Food Partners), JWT cookies, video/image uploads via Multer &amp; ImageKit, and a glassmorphic React UI.</p>
-      <p class="proj-stack">JavaScript · React · Node.js · Express · MongoDB · JWT · Vite · Multer · ImageKit</p>
-      <a href="https://github.com/saurabh850/SwipeFood" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
-    </div>
+
 
     <!-- NEW: SocialConnect -->
     <div class="cell2">
@@ -367,10 +357,10 @@
         If you would like to discuss a project, explore potential opportunities, or have any questions, please reach out using the form. I’ll get back to you as soon as possible.
     </div>
 
-  <form id="contact-form" action="mailto:shaurabhnarayan@gmail.com" method="POST" enctype="text/plain">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+  <form id="contact-form">
+    <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+    <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+    <textarea id="contact-message" name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send</button>
   </form>
 </div>
@@ -381,5 +371,6 @@
 
 </main>
 
-
+<script src="script.js"></script>
+</body>
 </html>
