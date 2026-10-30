@@ -5,22 +5,55 @@ if (localStorage.getItem("dark-mode") === "on") {
 
 // Wait for DOM to load for forms
 window.addEventListener("DOMContentLoaded", () => {
-  // Handle Contact Form cleanly
+  // Handle Contact Form (Web3Forms AJAX)
   const contactForm = document.getElementById("contact-form");
+  const messageEl = document.getElementById("messagesent");
+  
   if (contactForm) {
     contactForm.addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent standard insecure URL-encoded submission
+      e.preventDefault(); 
+      
+      if (messageEl) {
+        messageEl.textContent = "Sending...";
+        messageEl.className = "message";
+        messageEl.style.display = "block";
+      }
 
-      const name = document.getElementById("contact-name").value;
-      const email = document.getElementById("contact-email").value;
-      const message = document.getElementById("contact-message").value;
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-      // Construct a clean, perfectly formatted email
-      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-      // Open the user's default email client
-      window.location.href = `mailto:shaurabhnarayan@gmail.com?subject=${subject}&body=${body}`;
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async (response) => {
+          let jsonResponse = await response.json();
+          if (response.status == 200) {
+              if (messageEl) {
+                  messageEl.textContent = "Message sent successfully!";
+                  messageEl.className = "success";
+              }
+              contactForm.reset();
+          } else {
+              console.log(response);
+              if (messageEl) {
+                  messageEl.textContent = jsonResponse.message || "Failed to send message.";
+                  messageEl.className = "error";
+              }
+          }
+      })
+      .catch(error => {
+          console.log(error);
+          if (messageEl) {
+              messageEl.textContent = "Something went wrong!";
+              messageEl.className = "error";
+          }
+      });
     });
   }
 });
@@ -76,3 +109,31 @@ function toggleTheme() {
     }).catch(err => console.error("Tracker blocked or failed", err));
   }
 })();
+
+// --- Mobile Screenshot Gallery Logic ---
+window.addEventListener("DOMContentLoaded", () => {
+  // Open gallery when clicking the main project image (mostly for mobile)
+  document.querySelectorAll(".projects-section .cell2 > img").forEach(img => {
+    img.addEventListener("click", function() {
+      if (window.innerWidth <= 768) {
+        const gallery = this.parentElement.querySelector(".screenshot-gallery");
+        if (gallery) {
+          gallery.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevent background scrolling
+        }
+      }
+    });
+  });
+
+  // Close gallery when clicking the X button
+  document.querySelectorAll(".close-gallery").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation(); // Prevent event bubbling
+      const gallery = this.closest(".screenshot-gallery");
+      if (gallery) {
+        gallery.classList.remove("active");
+        document.body.style.overflow = ""; // Restore scrolling
+      }
+    });
+  });
+});
